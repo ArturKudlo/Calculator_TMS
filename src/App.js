@@ -6,6 +6,28 @@ import { ClearButton } from './components/ClearButton';
 import * as math from 'mathjs';
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      input: ""
+    }
+  }
+
+  addToInput = val => {
+    this.setState({input: this.state.input + val});
+  }
+
+  handleEqual = () => {
+    this.setState({ input: math.eval(this.state.input) });
+  }
+
+  handleMultiply = val => {
+    if (val === "x") {
+      this.setState({input: this.state.input + val.replace("x", "*")});
+    }
+}
+
   render() {
     return (
       <div className="app">
