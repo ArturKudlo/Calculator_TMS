@@ -1,4 +1,4 @@
-#React Calculator, TeachMeSkills courses
+# React Calculator, TeachMeSkills courses
 
 # How to start
 - Install modules:
